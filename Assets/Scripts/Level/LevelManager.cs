@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour {
 
 	public GameObject currentCheckpoint;
 
-	private PlayerMovement player;
+	public PlayerMovement player;
 
 	// Use this for initialization
 	void Start () {

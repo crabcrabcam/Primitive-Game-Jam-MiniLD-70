@@ -20,8 +20,12 @@ public class KillPlayer : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
+
+		print ("Something entered the collider");
+
 		if (other.name == "Player")
 		{
+			print ("Entered the death");
 			levelManager.RespawnPlayer();
 		}
 	}
