@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
 
+	public Text completion;
 
 	public string levelToLoad;
 
 	void Start()
 	{
-		
+		completion.text = "Completed " + PlayerPrefs.GetInt("CompletedTimes") + " Times!";
 	}
 
 	public void OnStart()
