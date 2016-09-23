@@ -48,10 +48,12 @@
      <Compile Include="Assets\Scripts\Gameplay\CameraController.cs" />
      <Compile Include="Assets\Scripts\Gameplay\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Gameplay\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Level\KillEnemy.cs" />
      <Compile Include="Assets\Scripts\Level\KillPlayer.cs" />
      <Compile Include="Assets\Scripts\Level\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Level\LevelUp.cs" />
      <Compile Include="Assets\Scripts\Menu\Menu.cs" />
+     <Compile Include="Assets\Scripts\Menu\PauseMenu.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>

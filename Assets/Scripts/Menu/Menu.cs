@@ -15,11 +15,24 @@ public class Menu : MonoBehaviour
 	public void OnStart()
 	{
 		Application.LoadLevel(levelToLoad);
+		PlayerPrefs.SetInt ("PlayerLevel", 1);
 	}
 
 	public void Quit()
 	{
 		Application.Quit();
 		Debug.Log("Quit the game.");
+	}
+
+	public void Continue(){
+
+		if (PlayerPrefs.GetInt ("PlayerLevel") == 0) {
+
+			Application.LoadLevel ("Level1");
+
+		} else {
+			Application.LoadLevel ("Level" + PlayerPrefs.GetInt ("PlayerLevel"));
+			print ("Level" + PlayerPrefs.GetInt ("PlayerLevel"));
+		}
 	}
 }

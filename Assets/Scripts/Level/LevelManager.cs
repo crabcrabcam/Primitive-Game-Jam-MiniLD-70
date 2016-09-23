@@ -9,9 +9,11 @@ public class LevelManager : MonoBehaviour {
 
 	public PlayerMovement player;
 
+	public int levelNumber;
+
 	// Use this for initialization
 	void Start () {
-	
+		PlayerPrefs.SetInt ("PlayerLevel", levelNumber);
 	}
 	
 	// Update is called once per frame
