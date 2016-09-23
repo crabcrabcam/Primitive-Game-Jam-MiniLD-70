@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Gameplay\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Gameplay\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Level\KillPlayer.cs" />
      <Compile Include="Assets\Scripts\Level\LevelManager.cs" />
