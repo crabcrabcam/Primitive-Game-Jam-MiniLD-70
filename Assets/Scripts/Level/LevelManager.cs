@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
@@ -10,6 +11,8 @@ public class LevelManager : MonoBehaviour {
 	public PlayerMovement player;
 
 	public int levelNumber;
+
+    public bool lastLevel = false;
 
 	// Use this for initialization
 	void Start () {
@@ -30,7 +33,18 @@ public class LevelManager : MonoBehaviour {
 
 	public void NextLevel()
 	{
-		Debug.Log("Level Up!");
-		Application.LoadLevel(levelToLoad);
+
+        if (lastLevel)
+        {
+            PlayerPrefs.SetInt("CompletedTimes", PlayerPrefs.GetInt("CompletedTimes") + 1);
+            SceneManager.LoadScene("Completed");
+            PlayerPrefs.SetInt("PlayerLevel", 1);
+        }
+        else
+        {
+            Debug.Log("Level Up!");
+            SceneManager.LoadScene(levelToLoad);
+        }
+		
 	}
 }

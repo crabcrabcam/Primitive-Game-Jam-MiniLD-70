@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class Menu : MonoBehaviour
 
 	public void OnStart()
 	{
-		Application.LoadLevel(levelToLoad);
+        SceneManager.LoadScene(levelToLoad);
 		PlayerPrefs.SetInt ("PlayerLevel", 1);
 	}
 
@@ -30,11 +31,18 @@ public class Menu : MonoBehaviour
 
 		if (PlayerPrefs.GetInt ("PlayerLevel") == 0) {
 
-			Application.LoadLevel ("Level1");
+            SceneManager.LoadScene("Level1");
 
 		} else {
-			Application.LoadLevel ("Level" + PlayerPrefs.GetInt ("PlayerLevel"));
+            SceneManager.LoadScene("Level" + PlayerPrefs.GetInt("PlayerLevel"));
 			print ("Level" + PlayerPrefs.GetInt ("PlayerLevel"));
 		}
 	}
+
+    public void toMainMenu()
+    {
+
+        SceneManager.LoadScene("Menu");
+
+    }
 }
